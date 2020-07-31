@@ -1,0 +1,76 @@
+<DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>価値観リスト</h1>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+
+      <!-- デフォルトclass="close open" -->
+      <div id="step1" class="close open"> 
+        <div class="contents">
+          <h2>遊び方</h2>
+          <p>これから、合計８０問の設問が一つずつ表示されます。<br>
+          それぞれ３択の中からあなたにとっての重要度を、できるだけ<strong>直感</strong>で選んでください。</p>
+          <p>
+          ☆・・・とても重要<br>
+          ○・・・まあまあ重要<br>
+          x・・・重要ではない<br>
+          </p>
+          <button id="go_step2_btn" class="btn">はじめる</button>
+        </div>
+      </div>
+
+      <div id="step2" class="close">
+        <div class="contents">
+          <p>直感で選んでください。（<span id="item_no"></span>/8）</p>
+          <small>※ページを更新すると最初からになります。</small>
+          <div><h2 id="list_title"></h2></div>
+          <div><p id="list_body"></p></div>
+          <div class="choice flex">
+            <!-- とても重要 -->
+            <div id="importance_3" class="box"><i class="far fa-star fa-3x"></i></div> 
+            <!-- まあまあ重要 -->
+            <div id="importance_2" class="box"><i class="far fa-circle fa-3x"></i></div>
+            <!-- 重要じゃない -->
+            <div id="importance_1" class="box"><i class="fas fa-times fa-3x"></i></div>
+          </div>
+          <div class="btn_list">
+            <button id="confirm_btn" class="btn close open">確定</button>
+            <button id="next_btn" class="btn close">次へ</button>
+            <button id="back_btn" class="btn">前へ</button>
+            <button id="reset_btn" class="btn">最初から</button>
+            <!-- <button id="title_btn">タイトルへ</button> -->
+          </div>
+          <small>※ページを更新すると最初からになります。</small>
+        </div>
+      </div>
+
+      <div id="step3" class="close">
+        <p>次に、先ほど選んでいただいた☆の中から<br>
+          更に重要なものを10項目まで絞ります。
+
+        </p>
+      </div>
+
+      <div id="step4" class="close"></div>
+
+      <div id="step5" class="close"></div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container"><small>©︎MasaoSasaki</small></div>
+  </footer>
+</body>
+</html>
